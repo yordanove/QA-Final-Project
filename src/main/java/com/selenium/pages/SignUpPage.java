@@ -58,7 +58,7 @@ public class SignUpPage extends BasePage{
                                 String password, String phoneNumber, String birthMonth,
                                 String birthDay, String birthdayYear) {
 
-        this.firstName.clear();
+        this.firstName.clear();                                                     // This is to clear for the second test.
         this.firstName.sendKeys(firstName);
 
         this.familyName.clear();
@@ -97,7 +97,7 @@ public class SignUpPage extends BasePage{
 
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);    //  Sets the amount of wait time in seconds
 
-        softAssert.assertEquals(realPasswordError.getText(), SignUpErrors.EXPECTED_PASSWORD_ERROR.getErrorMessage(), SignUpErrors.PASSWORD_ERROR_MESSAGE.getErrorMessage());
+        softAssert.assertEquals(realPasswordError.getText(), SignUpErrors.EXPECTED_PASSWORD_ERROR.getErrorMessage(), SignUpErrors.PASSWORD_ERROR_MESSAGE.getErrorMessage());    //Checks if the error messages are correct.
         softAssert.assertEquals(realPhoneError.getText(), SignUpErrors.EXPECTED_PHONE_ERROR.getErrorMessage(), SignUpErrors.PHONE_ERROR_MESSAGE.getErrorMessage());
         softAssert.assertEquals(reallBirthDateError.getText(), SignUpErrors.EXPECTED_BIRTH_DATE_ERROR.getErrorMessage(), SignUpErrors.BIRTH_DATE_ERROR_MESSAGE.getErrorMessage());
 

@@ -12,14 +12,14 @@ public class Statistics extends BasePage{
         super(driver);
     }
 
-    private static final String PRICE_BOOK_ERROR_MESSAGE ="Current Price/Book doesn't match expected Price/Book value.";   // No need for a whole file with error messages.
+    private static final String PRICE_BOOK_ERROR_MESSAGE ="Value does not match";   // No need for a whole file with error messages.
 
 
     @FindBy(xpath = "//span[text()='Price/Book']//ancestor::tr/td[2]")  // Find Current Price book by two Xpaths.
     private WebElement currentPriceBook;
 
     public void checkPriceBook(String priceBook){   // Displays the current Book Price.
-        log.info("Current value for Price/Book (mrq): " + priceBook);
+        log.info("Actual Value is: " + priceBook);
         SoftAssert softAssert = new SoftAssert();
         softAssert.assertEquals(currentPriceBook.getText(), priceBook, PRICE_BOOK_ERROR_MESSAGE);
         softAssert.assertAll();

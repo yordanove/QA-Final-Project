@@ -25,11 +25,11 @@ public class TestUtil {
 
     @BeforeSuite
     public void readConfigProperties() {
-        try(FileInputStream configFile = new FileInputStream("src/test/resources/config.properties")){
+        try(FileInputStream configFile = new FileInputStream("src/test/resources/config.properties")){          // Sets the target folder the config file
             Properties config = new Properties();
             config.load(configFile);
             url = config.getProperty("url");
-            implicitWait = Integer.parseInt(config.getProperty("implicitWait"));
+            implicitWait = Integer.parseInt(config.getProperty("implicitWait"));    // Get the wait Value from the config file
             browser = config.getProperty("browser");
         } catch (IOException e) {
             e.printStackTrace();
@@ -42,8 +42,7 @@ public class TestUtil {
         loadUrl();
 
         acceptCookies();
-//        executeSignInButton();
-//        executeCreateAnAccountButton();
+
 
     }
 
