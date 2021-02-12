@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Final QA Project 3</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>3/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/2/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Feb 05 13:20:24 EET 2021</td>
+<td>Started on:</td><td>Fri Feb 12 14:37:11 EET 2021</td>
 </tr>
-<tr><td>Total time:</td><td>13 seconds (13617 ms)</td>
+<tr><td>Total time:</td><td>19 seconds (19057 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,28 +67,105 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='test.LoginTests.executeSimpleTest()'><b>executeSimpleTest</b><br>Test class: test.LoginTests<br>Parameters: user1,  pass1</td>
-<td></td>
-<td>2</td>
-<td>test.LoginTests@2a54a73f</td></tr>
+<td title='test.tests.SignIn.YahooFinanceSignInTest.executeTestSignUpYahooFinance()'><b>executeTestSignUpYahooFinance</b><br>Test class: test.tests.SignIn.YahooFinanceSignInTest<br>Parameters: Joro,  Ivan,  try,  zw,  asd,  May,  aa,  vb</td>
+<td><div><pre>java.lang.AssertionError: The following asserts failed:
+	The email error does not seem to be right expected [This email address is not available for sign up, try something else] but found [That email address is too short, please use a longer one.]
+	at com.selenium.pages.SignUpPage.checkAllErrors(SignUpPage.java:104)
+	at test.tests.SignIn.YahooFinanceSignInTest.executeTestSignUpYahooFinance(YahooFinanceSignInTest.java:41)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:110)
+... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1377160602", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1377160602'><pre>java.lang.AssertionError: The following asserts failed:
+	The email error does not seem to be right expected [This email address is not available for sign up, try something else] but found [That email address is too short, please use a longer one.]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:47)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:31)
+	at com.selenium.pages.SignUpPage.checkAllErrors(SignUpPage.java:104)
+	at test.tests.SignIn.YahooFinanceSignInTest.executeTestSignUpYahooFinance(YahooFinanceSignInTest.java:41)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:764)
+	at org.testng.TestRunner.run(TestRunner.java:585)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.runSuites(TestNG.java:1069)
+	at org.testng.TestNG.run(TestNG.java:1037)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:110)
+</pre></div></td>
+<td>1</td>
+<td>test.tests.SignIn.YahooFinanceSignInTest@4fb3ee4e</td></tr>
 <tr>
-<td title='test.LoginTests.executeSimpleTest()'><b>executeSimpleTest</b><br>Test class: test.LoginTests<br>Parameters: user2,  pass2</td>
-<td></td>
-<td>2</td>
-<td>test.LoginTests@2a54a73f</td></tr>
-<tr>
-<td title='test.LoginTests.executeSimpleTest()'><b>executeSimpleTest</b><br>Test class: test.LoginTests<br>Parameters: user3,  pass3</td>
-<td></td>
-<td>2</td>
-<td>test.LoginTests@2a54a73f</td></tr>
+<td title='test.tests.SignIn.YahooFinanceSignInTest.executeTestSignUpYahooFinance()'><b>executeTestSignUpYahooFinance</b><br>Test class: test.tests.SignIn.YahooFinanceSignInTest<br>Parameters: Ken,  Stefan,  try21,  z6,  fbn ,  September,  ll,  nm</td>
+<td><div><pre>java.lang.AssertionError: The following asserts failed:
+	The email error does not seem to be right expected [This email address is not available for sign up, try something else] but found [A Yahoo account already exists with this email address. Sign in.]
+	at com.selenium.pages.SignUpPage.checkAllErrors(SignUpPage.java:104)
+	at test.tests.SignIn.YahooFinanceSignInTest.executeTestSignUpYahooFinance(YahooFinanceSignInTest.java:41)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:110)
+... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace197855654", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace197855654'><pre>java.lang.AssertionError: The following asserts failed:
+	The email error does not seem to be right expected [This email address is not available for sign up, try something else] but found [A Yahoo account already exists with this email address. Sign in.]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:47)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:31)
+	at com.selenium.pages.SignUpPage.checkAllErrors(SignUpPage.java:104)
+	at test.tests.SignIn.YahooFinanceSignInTest.executeTestSignUpYahooFinance(YahooFinanceSignInTest.java:41)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:764)
+	at org.testng.TestRunner.run(TestRunner.java:585)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.runSuites(TestNG.java:1069)
+	at org.testng.TestNG.run(TestNG.java:1037)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:110)
+</pre></div></td>
+<td>1</td>
+<td>test.tests.SignIn.YahooFinanceSignInTest@4fb3ee4e</td></tr>
 </table><p>
 </body>
 </html>
