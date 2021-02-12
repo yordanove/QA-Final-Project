@@ -22,12 +22,14 @@ public class YahooFinanceHome extends BasePage{
     @FindBy(id = "header-signin-link")
     private WebElement singIn;
 
-    public SignInYahooFinance executeSignInButton(){   // The method for clicking the sign in button.
+    // The method for clicking the sign in button.
+    public SignInYahooFinance pressSignInButton(){
         singIn.click();
         return new SignInYahooFinance(driver);
     }
 
-    public Summary searchCompany(String companyId){     // The method for searching for the company.
+    // The method for searching for the company.
+    public Summary searchCompany(String companyId){
         search.clear();
         search.sendKeys(companyId);
 

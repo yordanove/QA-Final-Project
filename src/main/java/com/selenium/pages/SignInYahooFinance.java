@@ -12,7 +12,7 @@ public class SignInYahooFinance extends BasePage{
     @FindBy(xpath = "//p[contains(@class,'sign-up-link')]")
     private WebElement createAccount;
 
-    public SignUpPage executeCreateAnAccountButton(){
+    public SignUpPage pressCreateAnAccount(){
         createAccount.click();
         return new SignUpPage(driver);
     }

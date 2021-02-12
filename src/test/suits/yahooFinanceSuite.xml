@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
 <suite name="Test Yahoo Finance" parallel="classes" thread-count="3">
-    <test name="Yahoo Finance Suite tests">
+    <test name="Yahoo Finance">
         <packages>
             <package name="test.tests.*"/>
         </packages>
