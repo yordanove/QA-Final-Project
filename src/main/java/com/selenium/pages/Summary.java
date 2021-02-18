@@ -20,14 +20,14 @@ public class Summary extends BasePage{
     @FindBy(xpath = "//span[text()='Statistics']")                      // Finds element for the Statistics page.
     private static WebElement statistics;
 
-    public static void checkCompanyDividends(String dividend){
+    public void checkCompanyDividends(String dividend){
         log.info("Company dividend: " + forwardDividendAndYield.getText());  // Get the text from the WebElement
         SoftAssert softAssert = new SoftAssert();
         softAssert.assertEquals(forwardDividendAndYield.getText(), dividend, DIVIDEND_ERROR_MESSAGE);
         softAssert.assertAll();
     }
 
-    public static Statistics goToStatisticsTab(){                           // Method to go to the Statistics Page
+    public Statistics goToStatisticsTab(){                           // Method to go to the Statistics Page
         statistics.click();
 
         return new Statistics(driver);

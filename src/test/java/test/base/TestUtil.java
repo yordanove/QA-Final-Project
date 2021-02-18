@@ -60,7 +60,7 @@ public class TestUtil {
         driver.quit();
     }
 
-    public void setupBrowserDriver(String browser){    // Sets up Chrome and Firefox and a potential error for an unsupported browser.
+    public void setupBrowserDriver(String browser){    // Sets up Chrome or Firefox and a potential error for an unsupported browser.
         switch(browser.toLowerCase(Locale.ROOT)){
             case "firefox":
                 driver = DriverFactory.getFirefoxDriver(implicitWait);
